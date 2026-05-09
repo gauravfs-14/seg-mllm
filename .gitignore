@@ -7,5 +7,8 @@ wheels/
 *.egg-info
 .files/
 
+# Demo source captures (repo ships MP4 only)
+public/*.mov
+
 # Virtual environments
 .venv

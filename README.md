@@ -2,6 +2,12 @@
 
 Chainlit app that runs an **Ollama vision+tools model** with a **Falcon-Perception** tool for open-vocabulary detection/segmentation.
 
+## Demo
+
+Screen recording on Apple Silicon: **Falcon-Perception 300M**, **bounding-box output**, **Gemma 4** in Ollama (fast interactive run).
+
+<video controls preload="metadata" src="https://raw.githubusercontent.com/gauravfs-14/seg-mllm/main/public/segment-300m.mp4"></video>
+
 ## Run
 
 ```bash
