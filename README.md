@@ -13,6 +13,7 @@ uv run main.py
 
 - Ollama configured with a vision+tools model
 - Falcon-Perception installed and configured
+- ffmpeg installed and configured in the path for video processing
 
 > [!NOTE]
 > This repository currently only support MLX on Apple Silicon. Why? because I use a Mac, and I don't want to deal with CUDA.
