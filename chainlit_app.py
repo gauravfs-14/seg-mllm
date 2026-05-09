@@ -128,7 +128,7 @@ class _ChainlitVisionHooks:
 
     async def on_thinking(self, round: int, text: str) -> None:
         async with cl.Step(
-            name=f"Reasoning (round {round})",
+            name=f"Reasoning",
             type="llm",
             default_open=False,
             auto_collapse=True,
@@ -144,7 +144,7 @@ class _ChainlitVisionHooks:
         overlay: Image.Image | None,
     ) -> None:
         async with cl.Step(
-            name=f"Segmentation (round {round})",
+            name=f"Segmentation",
             type="tool",
             default_open=True,
             show_input="json",
