@@ -482,11 +482,7 @@ async def on_chat_start() -> None:
     await cl.context.emitter.set_modes(_composer_modes(host, base))
 
     lines = [
-        "Use the **paperclip** on the chat bar to attach images or videos (like Cursor).",
-        "",
-        "**Model** lists only Ollama models that report **vision** and **tools** in `ollama show <name>`. Replies use the **Falcon tool loop** (agentic) by default.",
-        "",
-        "Open **Chat settings** in the **left sidebar** (or type **`@`** in the composer for settings commands) — tabs: Server, Ollama generation, Falcon.",
+        "Welcome to the seg-mllm! This is a Chainlit app that runs an Ollama vision+tools model with a Falcon-Perception tool for open-vocabulary detection/segmentation.",
     ]
     if not ollama_cli_installed():
         lines.append(
