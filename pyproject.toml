@@ -1,0 +1,30 @@
+[project]
+name = "seg-mllm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chainlit>=2.11.1",
+    # Pulls MLX on Apple Silicon; PyTorch on Linux/Windows (see package markers).
+    "falcon-perception>=1.0.0",
+    "numpy>=2.4.4",
+    "ollama>=0.6.2",
+    "opencv-python-headless>=4.13.0.92",
+    "pandas>=3.0.2",
+    "pillow>=12.2.0",
+    "pycocotools>=2.0.11",
+    # PyTorch: Linux x86_64 uses CUDA wheels via ``[tool.uv.sources]``; other platforms use PyPI.
+    # Apple Silicon Mac uses MLX only (falcon-perception); omit Torch there.
+    "torch>=2.11.0; sys_platform != 'darwin' or platform_machine != 'arm64'",
+    "torchvision>=0.26.0; sys_platform != 'darwin' or platform_machine != 'arm64'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'linux' and platform_machine == 'x86_64'" }]
+torchvision = [{ index = "pytorch-cu128", marker = "sys_platform == 'linux' and platform_machine == 'x86_64'" }]

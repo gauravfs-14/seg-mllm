@@ -1,0 +1,24 @@
+[project]
+
+[features]
+
+[features.spontaneous_file_upload]
+enabled = true
+accept = ["image/*", "video/*"]
+max_files = 5
+max_size_mb = 200
+
+[UI]
+# Favicon and header logos: ``public/favicon.*`` and ``public/logo_{light,dark}.*`` (project root).
+name = "seg-mllm"
+description = "Ollama VLM + Falcon-Perception segmentation agent"
+# Chat settings: "sidebar" (left panel) or "message_composer" (next to the input).
+chat_settings_location = "message_composer"
+# Open the settings panel on new chats so the form is visible (sidebar mode).
+default_chat_settings_open = false
+default_sidebar_state = "open"
+default_theme = "dark"
+cot = "full"
+
+[meta]
+generated_by = "2.11.1"
